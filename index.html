@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Detalle Especial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles-bg"></div>
+    <div class="parallax-bg"></div>
+
+    <!-- Contenedor del reproductor de YouTube (oculto) -->
+    <div id="player"></div>
+
+    <div class="intro">
+        <h1 class="welcome-text">Hola Princesa Hermosa</h1>
+        <h1 class="welcome-text">Te he preparado un detalle</h1>
+        <div class="gallery" id="gallery"> <!-- Asegúrate de que esta clase no tenga 'hidden' si quieres que sea visible -->
+            <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/438085783_3300066840296700_128897622943118392_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GSauCtEWu5cQ7kNvgHqSvX3&_nc_ht=scontent.fuio1-1.fna&oh=00_AYDoY5M8Uz4J1YGWf2Y7F2NmLlGfIV_mywnHYmNQZrUR_w&oe=66D04E50" alt="Descripción de la imagen" />
+        </div>
+        <button id="startButton" class="start-btn">Empezar</button>
+    </div>
+
+    <div class="main-content hidden" id="mainContent">
+        <div class="message-section">
+            <h2 id="message1" class="hidden">Cada día contigo es una nueva aventura.</h2>
+            <h2 id="message2" class="hidden">Eres más de lo que siempre soñé.</h2>
+            <h2 id="message3" class="hidden">No puedo esperar a crear más recuerdos juntos.</h2>
+            <h2 id="message4" class="hidden">Tu sonrisa ilumina mi mundo.</h2>
+            <h2 id="message5" class="hidden">Eres la razón por la que soy feliz.</h2>
+            <h2 id="message6" class="hidden">Gracias por ser tan especial.</h2>
+            <h2 id="message7" class="hidden">No hay nadie como tú, eres única.</h2>
+            <h2 id="message8" class="hidden">Cada momento a tu lado es un regalo.</h2>
+            <h2 id="message9" class="hidden">Eres mi persona favorita en el mundo.</h2>
+            <h2 id="message10" class="hidden">Juntos, podemos conquistar el mundo.</h2>
+        </div>
+
+        <div class="floating-elements">
+            <div class="heart"></div>
+            <div class="star"></div>
+        </div>
+
+    </div>
+
+    <!-- Cargar la API de YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

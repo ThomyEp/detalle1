@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Background and Visual Effects */
+.particles-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/11/19/14/20/space-1837306_960_720.jpg') center/cover no-repeat;
+    z-index: -2;
+}
+
+.parallax-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.8), rgba(10, 10, 35, 0.8));
+    z-index: -1;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.welcome-text {
+    font-size: 3em;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 2s forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-btn {
+    padding: 15px 30px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Message Section */
+.message-section h2 {
+    font-size: 2.5em;
+    margin: 20px;
+    opacity: 0;
+    transform: scale(0.8) rotateY(-15deg);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart, .star {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-100px) translateX(50px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+.heart {
+    top: 20%;
+    left: 10%;
+    background: pink;
+}
+
+.star {
+    top: 70%;
+    left: 80%;
+    background: yellow;
+}
+
+/* Parallax and Particle Effects */
+.particles-bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/03/22/17/54/galaxy-1272504_960_720.png') center/cover no-repeat;
+    animation: parallax 10s infinite linear;
+}
+
+@keyframes parallax {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}/* Ajusta el tamaño de la imagen */
+.gallery img {
+    width: 150px; /* Cambia el valor a lo que desees */
+    height: auto; /* Mantiene la proporción original */
+}
